@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form method="post" action="/value_converter">
+        <div>
+            <label for="value">Число:</label>
+            <input type="text" id="value" name="value" th:value="0">
+        </div>
+        <div>
+            <label for="from">Из:</label>
+            <select id="from" name="first">
+                <option>₽</option>
+                <option>$</option>
+                <option>€</option>
+            </select>
+        </div>
+        <div>
+            <label for="to">В:</label>
+            <select id="to" name="second">
+                <option>₽</option>
+                <option>$</option>
+                <option>€</option>
+            </select>
+        </div>
+        <button type="submit">перевести</button>
+        <p name="value" th:text="${value}"></p>
+    </form>
+    <form action="/">
+        <button type="submit">назад</button>
+    </form>
+</body>
+</html>
